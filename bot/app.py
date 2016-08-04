@@ -16,10 +16,12 @@ server = Flask(__name__)
 
 @server.route ('/toto', methods=['GET'])
 def local_test():
+	print("request received")
     return Response('it works')
 
 
 if __name__ == "__main__":
+    print("running")
     print(os.getenv("PORT"))
     server.run(debug=True)
     log_level = os.getenv("LOG_LEVEL", "INFO")
