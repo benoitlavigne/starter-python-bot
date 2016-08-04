@@ -9,7 +9,7 @@ from beepboop import bot_manager
 from slack_bot import SlackBot
 from slack_bot import spawn_bot
 
-#from flask import Flask
+from flask import Flask
 
 logger = logging.getLogger(__name__)
 server = Flask(__name__)
