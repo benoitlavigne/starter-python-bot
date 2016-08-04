@@ -12,16 +12,16 @@ from slack_bot import spawn_bot
 from flask import Flask
 
 logger = logging.getLogger(__name__)
-app = Flask(__name__)
+server = Flask(__name__)
 
-@app.route ('/toto', methods=['GET'])
+@server.route ('/toto', methods=['GET'])
 def local_test():
-	return Response('it works')
+    return Response('it works')
 
 
 if __name__ == "__main__":
 	
-	app.run(debug=True)
+    server.run(debug=True)
     log_level = os.getenv("LOG_LEVEL", "INFO")
     logging.basicConfig(format='%(asctime)s - %(levelname)s: %(message)s', level=log_level)
 
