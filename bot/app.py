@@ -23,7 +23,7 @@ def local_test():
 if __name__ == "__main__":
     print("running")
     print(os.getenv("PORT"))
-    server.run(host='0.0.0.0',port='7000',debug=True)
+    server.run(host='0.0.0.0',port=7000,debug=True)
     log_level = os.getenv("LOG_LEVEL", "INFO")
     logging.basicConfig(format='%(asctime)s - %(levelname)s: %(message)s', level=log_level)
 
