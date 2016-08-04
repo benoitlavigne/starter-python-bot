@@ -20,7 +20,6 @@ def local_test():
 
 
 if __name__ == "__main__":
-	
     server.run(debug=True)
     log_level = os.getenv("LOG_LEVEL", "INFO")
     logging.basicConfig(format='%(asctime)s - %(levelname)s: %(message)s', level=log_level)
