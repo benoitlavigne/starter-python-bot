@@ -16,7 +16,7 @@ server = Flask(__name__)
 
 @server.route ('/toto', methods=['GET'])
 def local_test():
-	print("request received")
+    print("request received")
     return Response('it works')
 
 
